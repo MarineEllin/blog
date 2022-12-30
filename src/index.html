@@ -5,15 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=League+Script&family=Mulish:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <title>Blog</title>
   </head>
   <body>
     <div class="container">
-      <a href="./form.html">Formulaire</a>
-      <img src="./assets/images/photo_cv_me.png" alt="photo_cv_me" />
+      <header>
+        <a class="header-brand" href="./index.html">Blog</a>
+        <ul>
+          <li>
+            <a href="./index.html" class="header-nav active">Accueil</a>
+          </li>
+          <li>
+            <a href="./form.html" class="header-nav">Créer un article</a>
+          </li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="articles-container">
+          <div class="article">
+            <img
+              src="https://randomuser.me/api/portraits/women/85.jpg"
+              alt="photo"
+            />
+            <h2>Titre de l'article</h2>
+            <p class="article-author">Marine</p>
+            <p class="article-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
+              ab dignissimos distinctio soluta in, tenetur possimus blanditiis
+              iste vero animi! Ipsum, officiis. Possimus provident dicta nisi
+              ipsam expedita obcaecati, error maxime. Quas voluptas debitis
+              placeat cum! Autem, similique ea. Vitae culpa voluptatibus et eius
+              impedit tenetur dolor illo earum molestias? Non beatae, aspernatur
+              expedita eveniet iure qui, incidunt voluptate officiis aliquam,
+              iusto nemo. Totam, quis. Repudiandae reiciendis debitis, maiores
+              quo ex aliquam architecto ipsa illo expedita officia dolore
+              minima, delectus quod eos laudantium cumque vitae totam?
+              Accusantium alias, quisquam dignissimos tempore praesentium vero
+              aut voluptatibus molestias inventore cumque nesciunt. Culpa.
+            </p>
+            <div class="article-action">
+              <button class="btn btn-danger">Supprimer</button>
+              <button class="btn btn-primary">Modifier</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>©Blog</footer>
     </div>
   </body>
 </html>

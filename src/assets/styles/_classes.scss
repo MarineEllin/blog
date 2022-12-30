@@ -1,0 +1,34 @@
+.title {
+  &-underline {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey);
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    background: var(--peps);
+    transition: 0.3s;
+  }
+  &-primary {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+  }
+  &-secondary {
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+  }
+}
+
+.text {
+  &-error {
+    color: var(--error);
+  }
+}

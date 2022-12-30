@@ -10,14 +10,12 @@
   @media (max-width: 767px) {
     @content;
   }
-
   /* Portrait tablet to landscape and desktop */
 }
 @mixin md {
   @media (min-width: 768px) and (max-width: 979px) {
     @content;
   }
-
   /* Large desktop */
 }
 @mixin xl {
