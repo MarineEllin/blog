@@ -18,9 +18,6 @@
 header {
   display: flex;
   flex-direction: row;
-  @include xs {
-    flex-direction: column;
-  }
   justify-content: space-between;
   align-items: center;
   grid-area: header;
@@ -35,6 +32,7 @@ header {
     font-weight: 700;
   }
   .header-menu {
+    position: relative;
     ul {
       display: flex;
       @include xs {
@@ -52,30 +50,36 @@ header {
     }
     .header-menu-icon {
       display: none;
+      color: var(--peps);
+      font-size: 3rem;
+      cursor: pointer;
       @include xs {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
       }
-      .icon {
-        color: var(--peps);
-        font-size: 2.5rem;
-        margin-top: 2rem;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .header-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 1rem;
-        padding: 1rem 0;
-        &.active {
-          color: var(--peps);
+    }
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      top: 8.2rem;
+      right: 0rem;
+      background: white;
+      opacity: 97%;
+      width: 20rem;
+      padding: 3rem 1.5rem;
+      box-shadow: var(--box-shadow);
+      ul {
+        display: block;
+        li {
+          padding: 2rem 0;
+          a {
+            color: var(--text);
+          }
         }
       }
+    }
+    .mobile-menu.open {
+      display: block;
     }
   }
 }
