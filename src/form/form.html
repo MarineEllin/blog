@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/dd53ab9e05.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=League+Script&family=Mulish:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -14,25 +18,40 @@
     <div class="container">
       <header>
         <a class="header-brand" href="./index.html">Blog</a>
-        <ul>
-          <li>
-            <a href="./index.html" class="header-nav">Accueil</a>
-          </li>
-          <li>
-            <a href="./form.html" class="header-nav active">Créer un article</a>
-          </li>
-        </ul>
+        <div class="header-menu">
+          <ul>
+            <li>
+              <a href="./index.html" class="header-nav">Accueil</a>
+            </li>
+            <li>
+              <a href="./form.html" class="header-nav active">Créer un article</a>
+            </li>
+          </ul>
+          <details class="header-menu-icon">
+            <summary class="icon"><i class="fa-solid fa-bars"></i></summary>
+            <a href="./index.html" class="header-icon">Accueil</a>
+            <a href="./form.html" class="header-icon active">Créer un article</a>
+          </details>
+        </div>
       </header>
       <div class="content">
         <form class="form">
           <h2 class="title-underline">Ajouter un article</h2>
           <div class="form-group">
-            <label>Auteur</label>
-            <input type="text" name="author" />
+            <label>Titre</label>
+            <input type="text" name="title"></input>
           </div>
           <div class="form-group">
             <label>Catégorie</label>
             <input type="text" name="category" />
+          </div>
+          <div class="form-group">
+            <label>Auteur</label>
+            <input type="text" name="author" />
+          </div>
+          <div class="form-group">
+            <label>Image de profil</label>
+            <input type="text" name="img" />
           </div>
           <div class="form-group">
             <label>Article</label>

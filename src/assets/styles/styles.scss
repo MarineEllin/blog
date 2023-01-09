@@ -18,11 +18,14 @@
 header {
   display: flex;
   flex-direction: row;
+  @include xs {
+    flex-direction: column;
+  }
   justify-content: space-between;
   align-items: center;
   grid-area: header;
   background: var(--primary-dark);
-  padding: 20px;
+  padding: 30px;
   a {
     color: white;
   }
@@ -31,15 +34,47 @@ header {
     font-size: 6rem;
     font-weight: 700;
   }
-  ul {
-    display: flex;
-    li {
-      .header-nav {
-        font-size: 1.8rem;
-        padding: 0 10px;
+  .header-menu {
+    ul {
+      display: flex;
+      @include xs {
+        display: none;
       }
-      .active {
+      li {
+        .header-nav {
+          font-size: 1.8rem;
+          padding: 0 10px;
+        }
+        .active {
+          color: var(--peps);
+        }
+      }
+    }
+    .header-menu-icon {
+      display: none;
+      @include xs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon {
         color: var(--peps);
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .header-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 1rem 0;
+        &.active {
+          color: var(--peps);
+        }
       }
     }
   }
@@ -48,6 +83,7 @@ header {
 .content {
   grid-area: content;
   padding: 20px;
+  background: var(--grey);
 }
 
 footer {

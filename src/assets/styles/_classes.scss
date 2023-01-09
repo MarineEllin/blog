@@ -25,6 +25,15 @@
     color: var(--primary);
     border: 1px solid var(--primary);
   }
+  &-danger {
+    background: var(--error);
+    border: 1px solid var(--error);
+    color: white;
+    &:hover {
+      background: var(--error-dark);
+      border: 1px solid var(--error-dark);
+    }
+  }
 }
 
 .text {
