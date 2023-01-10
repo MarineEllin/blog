@@ -6,55 +6,74 @@
   background: var(--grey);
   display: flex;
   justify-content: center;
-  align-items: center;
-  .articles-container {
-    margin-top: 4rem;
-    max-width: 800px;
-    width: 100%;
-    .article {
-      margin-bottom: 8rem;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 8rem;
-      @include xs {
-        padding: 2rem 2rem;
-      }
+  align-items: flex-start;
+  padding-top: 8rem;
+  .sidebar {
+    flex: 0 0 25rem;
+    padding: 0 2rem;
+    .categories {
+      padding: 2rem;
       background: white;
+      box-shadow: var(--box-shadow);
       border-radius: 0.3rem;
-      img {
-        border-radius: 50%;
-        width: 8rem;
-        height: 8rem;
-        margin-top: -6rem;
+      li {
+        margin: 1rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover {
+          color: var(--primary);
+        }
       }
-      h2 {
-        overflow-wrap: break-word;
-        margin: 0;
-        margin-top: 1rem;
-        text-align: center;
-      }
-      .article-author {
-        overflow-wrap: break-word;
-        margin-bottom: 2rem;
-        color: var(--primary);
-        font-weight: 700;
-        font-style: italic;
-        font-size: 1.8rem;
-      }
-      .article-content {
-        overflow-wrap: break-word;
-        white-space: pre-line;
-      }
-      .article-action {
-        width: 100%;
-        margin-top: 2rem;
-        padding: 2rem 0;
-        display: flex;
-        justify-content: flex-end;
-        border-top: 1px solid var(--grey);
-      }
+    }
+  }
+}
+.articles-container {
+  flex: 1;
+  max-width: 80rem;
+  width: 100%;
+  .article {
+    margin-bottom: 8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 8rem;
+    @include xs {
+      padding: 2rem 2rem;
+    }
+    background: white;
+    border-radius: 0.3rem;
+    img {
+      border-radius: 50%;
+      width: 8rem;
+      height: 8rem;
+      margin-top: -6rem;
+    }
+    h2 {
+      overflow-wrap: break-word;
+      margin: 0;
+      margin: 1rem 0;
+      text-align: center;
+    }
+    .article-author {
+      overflow-wrap: break-word;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.8rem;
+    }
+    .article-content {
+      overflow-wrap: break-word;
+      white-space: pre-line;
+    }
+    .article-action {
+      width: 100%;
+      margin-top: 2rem;
+      padding: 2rem 0;
+      display: flex;
+      justify-content: flex-end;
+      border-top: 1px solid var(--grey);
     }
   }
 }
